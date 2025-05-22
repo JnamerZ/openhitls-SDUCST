@@ -216,6 +216,10 @@
                     "sm4": null,
                     "x25519": null,
                     "ecc": null
+                },
+                "rv64gcv": {
+                    "sm4": null,
+                    "modes": null
                 }
             }
         },
@@ -808,6 +812,25 @@
                 ".srcs": {
                     "public": "crypto/modes/src/modes*.c",
                     "no_asm": "crypto/modes/src/noasm_*.c",
+                    "rv64gcv": [
+                        "crypto/modes/src/noasm_aes_cbc.c",
+                        "crypto/modes/src/noasm_aes_ecb.c",
+                        "crypto/modes/src/noasm_poly1305.c",
+                        "crypto/modes/src/noasm_sm4_ecb.c",
+                        "crypto/modes/src/noasm_sm4_xts.c",
+                        "crypto/modes/src/noasm_aes_ccm.c",
+                        "crypto/modes/src/noasm_aes_gcm.c",
+                        "crypto/modes/src/asm_sm4_cbc.c",
+                        "crypto/modes/src/noasm_sm4_gcm.c",
+                        "crypto/modes/src/noasm_aes_cfb.c",
+                        "crypto/modes/src/noasm_aes_xts.c",
+                        "crypto/modes/src/noasm_sm4_cfb.c",
+                        "crypto/modes/src/noasm_sm4_ofb.c",
+                        "crypto/modes/src/noasm_aes_ctr.c",
+                        "crypto/modes/src/noasm_ghash.c",
+                        "crypto/modes/src/noasm_sm4_ctr.c",
+                        "crypto/modes/src/noasm_sm4_setkey.c"
+                    ],
                     "armv8": [
                         "crypto/modes/src/asm/poly1305_armv8.S",
                         "crypto/modes/src/asm_aes_gcm.c",
@@ -942,6 +965,10 @@
                     "no_asm":[
                         "crypto/sm4/src/crypt_sm4.c",
                         "crypto/sm4/src/sm4_key.c"
+                    ],
+                    "rv64gcv":[
+                        "crypto/sm4/src/asm/crypt_sm4_rv64gcv.S",
+                        "crypto/sm4/src/crypt_sm4_rv64gcv.c"
                     ],
                     "armv8":[
                         "crypto/sm4/src/asm/crypt_sm4_xts_armv8.S",

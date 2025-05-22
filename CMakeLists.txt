@@ -23,7 +23,7 @@ else()
     set(HiTLS_BUILD_DIR ${HiTLS_SOURCE_ROOT_DIR}/build)
 endif()
 
-execute_process(COMMAND python3 ${HiTLS_SOURCE_ROOT_DIR}/configure.py -m --build_dir ${HiTLS_BUILD_DIR})
+execute_process(COMMAND python3 ${HiTLS_SOURCE_ROOT_DIR}/configure.py -m --build_dir ${HiTLS_BUILD_DIR} --asm_type rv64gcv --asm sm4 modes)
 
 include(${HiTLS_BUILD_DIR}/modules.cmake)
 

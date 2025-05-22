@@ -35,6 +35,7 @@ endif()
 if(ENABLE_ASAN)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=address -fno-stack-protector -fno-omit-frame-pointer")
 endif()
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt")
 
 add_library(DEMO_INTF INTERFACE)
 target_compile_options(DEMO_INTF INTERFACE -g)

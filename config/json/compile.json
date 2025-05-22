@@ -37,7 +37,7 @@
             "-DHITLS_AARCH64_PACIASP"
         ],
         "CC_DEBUG_FLAGS": [],
-        "CC_USER_DEFINE_FLAGS": []
+        "CC_USER_DEFINE_FLAGS": ["-march=rv64imafdcv_zicbom_zicboz_zicntr_zicond_zicsr_zifencei_zihintpause_zihpm_zfh_zfhmin_zca_zcd_zba_zbb_zbc_zbs_zkt_zve32f_zve32x_zve64d_zve64f_zve64x_zvfh_zvfhmin_zvkt"]
     },
     "linkFlag": {
         "PUBLIC": [

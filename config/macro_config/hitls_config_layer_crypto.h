@@ -675,7 +675,9 @@
 #define HITLS_CRYPTO_CHACHA20_ASM
 #endif
 
-#if defined(HITLS_CRYPTO_SM4_X8664) || defined(HITLS_CRYPTO_SM4_ARMV8)
+#if defined(HITLS_CRYPTO_SM4_X8664) || \
+    defined(HITLS_CRYPTO_SM4_ARMV8) || \
+    defined(HITLS_CRYPTO_SM4_RV64GCV)
 #define HITLS_CRYPTO_SM4_ASM
 #endif
 
